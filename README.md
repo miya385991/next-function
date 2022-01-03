@@ -19,5 +19,3 @@ env.localに`NEXT_PUBLIC_API_URL= API_URL記述`を記述してください
 
 
 
-
-＃next-pager
