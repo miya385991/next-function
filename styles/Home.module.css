@@ -1,9 +1,13 @@
+
+
 .pagerItem{
   display:flex;
   justify-content:space-around;
   width:30%;
 
 }
+
+
 
 .pagerItem >ul {
   margin: 0;

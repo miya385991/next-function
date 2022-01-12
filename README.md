@@ -19,3 +19,43 @@ env.localに`NEXT_PUBLIC_API_URL= API_URL記述`を記述してください
 
 
 
+tailwind＆postCss
+
+
+
+Terminal
+
+npx create-next-app my-project
+cd my-project
+
+postcss-cli
+
+
+package.jsonに記述
+"build:css":"postcss styles/main.css -o styles/main_browser.css "
+
+
+
+postcss.config.jsに行き
+
+テスト用コードを書きビルドできるかを確認する
+
+
+以下をpostcss.config.jsに記述
+module.exports = {
+    plugins: [
+        require("tailwindcss")
+    ]
+};
+
+コマンド入力する
+yarn run biuld:css
+
+
+main_browser.cssが作成されtailwindow.cssがbuildされていたらOK
+
+
+
+postcss pluginsに"autoprefixer"を追記
+
+yarn add postcss-nestingをインストール
