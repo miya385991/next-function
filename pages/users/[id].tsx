@@ -4,12 +4,9 @@ import Link from "next/link";
 
 const UserSlug = ({ user }) => {
 
-
-  const router = useRouter()
-  console.log(router);
   return (
     <div>
-      <table border="1">
+      <table >
         <tbody>
           <tr>
             <th>id:</th>
@@ -34,21 +31,8 @@ const UserSlug = ({ user }) => {
 
 export default UserSlug;
 
-export async function getStaticPaths() {
-    const res = await fetch(process.env.NEXT_PUBLIC_API_URL);
-  const users = await res.json();
-  const paths = users.map((user) => ({ params: { id: `${user.id}` } }));
 
-
-    return {
-      paths,
-        fallback: false,
-    }
-}
-
-
-
-export async function getStaticProps(query) {
+export async function getServerSideProps(query) {
   const id = query.params.id;
   const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${id}`);
   const user = await res.json();
