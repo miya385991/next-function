@@ -1,9 +1,8 @@
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
 
 const PagerList = ({ page, pageList }) => {
     return (
-      <div className={styles.pagerItem}>
+      <div >
         <Link href={`?page=${page.backPage}`} passHref>
           <a>前へ</a>
         </Link>

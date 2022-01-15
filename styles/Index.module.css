@@ -23,3 +23,6 @@
   width: 30%;
 }
 
+.list{
+  @apply border-slate-400 bg-gray-600 
+}
