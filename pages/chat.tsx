@@ -29,7 +29,7 @@ const Chat = () => {
     name;
     fetchAPI();
     // getAPI()
-    console.log(user);
+    // console.log(user);
     
   };
 
