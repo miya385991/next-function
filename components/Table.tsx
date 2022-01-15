@@ -1,5 +1,4 @@
 import Link from "next/link";
-import styles from "../styles/Home.module.css";
 import PagerList from "./PagerList";
 
 const Table = ({ page, users, totalCount }) => {
@@ -19,7 +18,7 @@ const Table = ({ page, users, totalCount }) => {
   // ////////////////////////////pagerここまで///////////////////////////////////
   return (
     <div>
-      <table className={styles.tables}>
+      <table>
         <thead>
           <tr>
             <th>id</th>
